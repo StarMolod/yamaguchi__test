@@ -1,5 +1,4 @@
-// Immediately invoked function expression
-// to not pollute the global scope
+// Вращаем колесо и накладываем blur эффект
 (function () {
 	const wheel = document.querySelector('.wheel');
 	const startButton = document.querySelector('.button');
@@ -35,7 +34,7 @@
 })();
 
 
-/*
+/* //тесты
 var timeoutID;
 function delayWindow() {
 	timeoutID = window.setTimeout(slowAlert, 1500);
@@ -46,6 +45,8 @@ function slowAlert() {
 }
 */
 
+
+//выводим окно с призом по окончании вращения колеса
 jQuery(document).ready(function ($) {
 
 	$('.js-anchor').on('click', function (e) {
@@ -61,11 +62,13 @@ jQuery(document).ready(function ($) {
 	});
 });
 
+//блокируем кнопку после трех призов(нажатий)
 let num = 0, button = document.querySelector('[type=button]');
 button.onclick = function () {
 	num++, num > 2 ? this.disabled = true : '';
 };
 
+//выводим случайный приз (1 из 16)
 var mas=["img/1.jpg","img/2.jpg","img/3.jpg","img/4.jpg","img/5.jpg","img/6.jpg","img/7.jpg","img/8.jpg","img/9.jpg","img/10.jpg","img/11.jpg","img/12.jpg","img/13.jpg","img/14.jpg","img/15.jpg","img/16.jpg"]; // Все названия картинок
 function randomIMG(){
    var r=Math.floor(Math.random()*mas.length);
