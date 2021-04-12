@@ -5,6 +5,7 @@
 	<title>Wheel of fortune</title>
 	<meta charset="UTF-8" />
 	<link rel="stylesheet" type="text/css" href="styles.css" />
+	<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 </head>
 
 <body>
@@ -13,14 +14,15 @@
 		<img class="marker" src="marker.png" />
 		<img class="wheel" src="wheel.png" />
 		<div class="shadow__wheel"></div>
-		<a href="#okno">
-			<button class="button" onclick='delayWindow();'>
-				Испытать удачу
-			</button>
+		<a class="js-anchor button" href="#okno" onclick='randomIMG();'>
+			<input type="button" class="button"  Value="Испытать удачу">
 		</a>
-		<div id="okno">
-			Всплывающее окошко!<br>
-			<a href="#" class="close">Закрыть окно</a>
+		<div id="okno" class="okno-style">
+			<h3 class="okno-text">Вы выиграли!</h3>
+			<img id="myimg" class="okno-img"  src="img/1.jpg">
+			<a href="#" class="close">		
+				Получить приз
+			</a>
 		</div>
 
 	</div>
